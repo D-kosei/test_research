@@ -1,0 +1,150 @@
+/* 全体 */
+body {
+  margin: 0;
+  background: radial-gradient(#ffffff, #3271dd);
+}
+
+/* フレーム */
+.frame {
+  margin: 70px auto;
+  width: 800px;
+  border: 10px solid #0930ae;
+  border-radius: 8px;
+}
+
+/* ボード */
+.board {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 20px;
+  min-height: 480px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.board .move-img{
+    position:absolute;
+    right: 30px;
+    bottom:0;
+    width:250px;
+    z-index: 1;
+}
+
+/* タイトル */
+.title{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 80px;
+  font-weight: 1000;
+  color: #000;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 3px 0 #86b0f8;
+  text-align: center;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+/* 2×2配置用のスタイルを追加・修正 */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;         /* 折り返しを有効に */
+  flex-direction: row;     /* 横並び */
+  justify-content: center; /* 中央寄せ */
+  align-items: center;
+  gap: 35px;          /* 必要に応じて調整 */
+  width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.buttons a {
+  flex: 1 1 40%;           /* 2列になるように */
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+/* ボタン */
+button {
+  width: 220px;            /* ボタン幅を調整 */
+  min-width: 150px;
+  font-size: 28px;
+  padding: 7px 0;
+  border: 4px solid #2d4cba;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 2px 3px 0 #5da8e1;
+  font-family: serif;
+}
+
+.start {
+  color: #c33;
+  font-weight: 700;
+  background: #fdc1bb;
+}
+.howTo {
+  color: #222;
+  font-weight: 700;
+  background: #f6f0ca;
+}
+.setting {
+  color: #206312;
+  font-weight: 700;
+  background: #b4f0bc;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  html, body {
+    height: 100vh !important;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  body {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    width: 100vw !important;
+    overflow: hidden;
+  }
+  .frame {
+    margin: 0 !important;
+    width: 98vw !important;
+    max-width: 420px !important;
+    box-sizing: border-box;
+  }
+}
+
+/*変更した*/
+/* 末尾に追加：全体レスポンシブ対応 */
+@media (max-width: 800px), (max-height: 600px) {
+  .frame {
+    width: 96vw;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-size: clamp(36px, 8vw, 60px);
+  }
+
+  .buttons {
+    width: 100%;
+    gap: 20px;
+  }
+
+  button {
+    width: 45vw;
+    font-size: clamp(16px, 4vw, 24px);
+  }
+
+  .board .move-img {
+    width: 160px;
+    right: 10px;
+  }
+}

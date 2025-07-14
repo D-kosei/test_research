@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', 'ヒラギノ角ゴ ProN', 'メイリオ', sans-serif;
+  background: radial-gradient(#a3bae2, #3271dd);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  padding: 36px 28px 32px 28px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.setting-item {
+  margin-bottom: 22px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-item label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.setting-item select,
+.setting-item input[type="range"] {
+  margin-left: 16px;
+  font-size: 1em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+button[type="submit"] {
+  padding: 8px 24px;
+  background-color: #3271dd;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2456a5;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background-color: #34495e;
+}
+
+/*変更した*/
+@media (max-width: 768px) {
+  .container {
+    width: 92vw;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .setting-item,
+  .ranking-item,
+  .ranking-header,
+  ul {
+    font-size: clamp(14px, 4vw, 18px);
+  }
+
+  .back-btn,
+  .back-button,
+  button[type="submit"] {
+    font-size: clamp(14px, 4vw, 18px);
+    padding: 8px 16px;
+  }
+}
